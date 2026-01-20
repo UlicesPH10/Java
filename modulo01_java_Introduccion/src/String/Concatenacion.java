@@ -4,18 +4,17 @@ public class Concatenacion {
     public static void main(String[] args) {
         String curso = "Programación Java";
         String profesor = "Andrés Guzmán";
+        curso.concat(profesor); //curso no cambia porque los string son imnutables
+        String resultado = curso.concat(profesor);
+        System.out.println(resultado);
 
-        String detalle = curso + " con el instructor " + profesor;
-        System.out.println("detalle = " + detalle);
+        String otroStirng = curso.transform(c -> {
+            return c.concat(" con " + profesor );
+        });
+        System.out.println(curso);
+        System.out.println(otroStirng);
 
-        int numeroA = 10;
-        int numeroB = 5;
-
-        System.out.println(detalle + (numeroA + numeroB));
-        System.out.println(numeroA + numeroB + detalle);
-
-        String detalle2 = curso.concat(" con ").concat(profesor);
-        System.out.println("detalle2 = " + detalle2);
-
+        String resultado3 = resultado.replace("a", "A");
+        System.out.println("resultado3 = " + resultado3);
     }
 }
