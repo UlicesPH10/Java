@@ -14,5 +14,7 @@ public class CadenaToPrimitivo {
         String logicStr = "True";
         boolean logicBolean = Boolean.parseBoolean(logicStr);
         System.out.println("logicBolean = " + logicBolean);
+
+
     }
 }
