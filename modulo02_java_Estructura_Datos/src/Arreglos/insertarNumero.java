@@ -1,3 +1,5 @@
+package Arreglos;
+
 public class insertarNumero {
     public static void main(String[] args) {
         int[] nums = {15, 17, 19, 23, 25, 27, 0};

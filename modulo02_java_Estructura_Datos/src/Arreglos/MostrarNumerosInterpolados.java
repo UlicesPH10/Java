@@ -1,3 +1,5 @@
+package Arreglos;
+
 public class MostrarNumerosInterpolados {
     public static void main(String[] args) {
         int[] nums = new int[10];

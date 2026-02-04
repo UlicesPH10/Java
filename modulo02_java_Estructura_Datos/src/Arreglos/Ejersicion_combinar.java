@@ -1,3 +1,5 @@
+package Arreglos;
+
 public class Ejersicion_combinar {
     public static void main(String[] args) {
         int[] a, b, c;

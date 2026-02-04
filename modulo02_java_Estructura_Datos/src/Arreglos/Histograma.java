@@ -1,3 +1,5 @@
+package Arreglos;
+
 public class Histograma {
     public static void main(String[] args) {
         int[] numbers = {4, 3, 4, 6, 6, 4, 1, 4, 5, 4, 1, 1};

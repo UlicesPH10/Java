@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package Arreglos;
+
 import java.util.Scanner;
 
 public class NotasAlumnos  {

@@ -1,3 +1,5 @@
+package Arreglos;
+
 import java.util.Scanner;
 
 public class ejersicio_1 {
