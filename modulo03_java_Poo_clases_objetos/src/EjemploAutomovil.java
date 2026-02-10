@@ -1,20 +1,28 @@
 public class EjemploAutomovil {
     public static void main(String[] args) {
-        Automovil subaru = new Automovil();
+        Automovil subaru = new Automovil("Subaru", "Impreza");
 
-        subaru.fabricante = "Subaru";
-        subaru.modelo = "Impreza";
-        subaru.cilindrada = 2.0;
-        subaru.color = "Blanco";
-        System.out.println(subaru.detalle());
+        subaru.setCilindrada(2.0);
+        subaru.setColor("Blanco");
 
-        Automovil mazda = new Automovil();
-        mazda.fabricante = "Mazda";
-        mazda.modelo ="BT-50";
-        mazda.color = "rojo";
-        mazda.cilindrada = 3.0;
+        System.out.println(subaru.verDetalle());
+        System.out.println(subaru.acelerar(3000));
+        System.out.println(subaru.frenar());
+        System.out.println("Kilómetros por litro " + subaru.calcularConsumo(300,0.6f));
+        System.out.println("Kilómetros por litro " + subaru.calcularConsumo(300,60));
+
+        System.out.println("-".repeat(10) + " NISSAN " + "-".repeat(10));
+        Automovil nissan = new Automovil("Nissan", "Navara", "Gris Oscuro", 3.5, 50);
+        System.out.println(nissan.verDetalle());
+        System.out.println(nissan.calcularConsumo(300, 60));
+
+        Automovil mazda = new Automovil("mazda", "BT-50", "rojo", 3.0, 50);
 
         System.out.println("-".repeat(10) + " MAZDA " + "-".repeat(10));
-        System.out.println(mazda.detalle());
+        System.out.println(mazda.verDetalle());
+        System.out.println(mazda.acelerarFrenar(2000));
+
+
+
     }
 }
