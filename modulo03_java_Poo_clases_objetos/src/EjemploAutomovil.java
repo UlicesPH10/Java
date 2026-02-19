@@ -4,7 +4,8 @@ public class EjemploAutomovil {
     public static void main(String[] args) {
         Automovil subaru = new Automovil("Subaru", "Impreza");
 
-        subaru.setCilindrada(2.0);
+        subaru.setMotor(new Motor(2.0, TipoMotor.BENCINA));
+        subaru.setEstanque(new Estanque());
         subaru.setColor(Color.BLANCO);
 
         System.out.println(subaru.verDetalle());
@@ -15,9 +16,12 @@ public class EjemploAutomovil {
 
         System.out.println("-".repeat(10) + " NISSAN " + "-".repeat(10));
 
-        Automovil nissan2 = new Automovil();
-        Automovil nissan = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
-        Automovil auto = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Automovil auto = new Automovil();
+        Automovil nissan = new Automovil("Nissan", "Navara", Color.GRIS,
+                new Motor(4.0, TipoMotor.DIESEL), new Estanque(50));
+        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS,
+                new Motor(3.5, TipoMotor.BENCINA), new Estanque(50));
+
         System.out.println(" son iguales? " + (nissan == nissan2));
         System.out.println(" son iguales? " + nissan.equals(nissan2));
         System.out.println(nissan.verDetalle());
@@ -27,11 +31,13 @@ public class EjemploAutomovil {
         Date Fecha = new Date();
         System.out.println(auto.equals(Fecha));
 
-        Automovil mazda = new Automovil("mazda", "BT-50", Color.ROJO, 3.0, 50);
+        Automovil mazda = new Automovil("mazda", "BT-50", Color.ROJO,  new Motor(3.0, TipoMotor.DIESEL));
+        mazda.setEstanque(new Estanque(45));
 
         System.out.println("-".repeat(10) + " MAZDA " + "-".repeat(10));
         System.out.println(mazda.verDetalle());
         System.out.println(mazda.acelerarFrenar(2000));
+
 
     }
 }
