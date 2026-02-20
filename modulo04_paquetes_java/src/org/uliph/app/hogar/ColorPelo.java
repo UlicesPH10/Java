@@ -1,4 +1,5 @@
 package org.uliph.app.hogar;
 
-public enum Color {
+public enum ColorPelo {
+    NEGRO, CAFE, CASTANO, RUBIO, COLORIN
 }
